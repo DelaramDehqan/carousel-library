@@ -1,0 +1,17 @@
+<div class="carousel-container">
+  <div class="carousel">
+    <div class="carousel-slide" [style.transform]="'translateX(' + slideOffset + '%)'">
+      <div class="carousel-item col-md-4" *ngFor="let image of images">
+        <h3> •○  {{ image.title }}  ○•</h3>
+        <hr />
+        <img src="{{ image.url }}" alt="{{ image.title }}" />
+      </div>
+    </div>
+    <div class="carousel-controls-side">
+      <button title="عکس قبلی" (click)="previousSlide()" [disabled]="currentSlide === 0">🡸</button>
+      <button title="عکس بعدی" (click)="nextSlide()" [disabled]="currentSlide === images.length - 1">🡺</button>
+      <hr />
+      <button class="carousel-controls-close" title="بستــن" (click)="closePopup()">✘</button>
+    </div>
+  </div>
+</div>

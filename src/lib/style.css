@@ -1,0 +1,115 @@
+
+
+.carousel-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.208);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.carousel {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid rgba(33, 61, 87, 0.301);
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-item h3 {
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(33, 61, 87, 0.116);
+  color: rgb(33,61,87);
+  width: 100%;
+  text-align: center;
+  /* font-family: "IranSans"; */
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid rgba(128, 128, 128, 0.212);
+}
+
+.carousel-controls-side {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.carousel-controls-side button {
+  margin: 0 10px 10px 0;
+  background-color: rgb(33,61,87);
+  color: antiquewhite;
+  border: none;
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.carousel-controls-close {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.carousel-controls-side button:hover {
+  background-color: #876996;
+   width: 34px;
+  height: 34px;
+}
+
+.carousel-controls-side button:active {
+  background-color: #63df53;
+}
+
+.carousel-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel {
+    width: 70%;
+    height: 50%;
+  }
+}
